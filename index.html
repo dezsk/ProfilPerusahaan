@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>PT Harja Karya</title>
+
+	<!-- Fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;700&display=swap" rel="stylesheet">
+
+    <!-- Icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
+
+    <!-- CSS Layout -->
+	<link rel="stylesheet" type="text/css" href="style-index.css">
+</head>
+<body>
+	<!-- Navbar -->
+	<nav class="navbar">
+		
+		<a href="#" class="navbar-name"><img src="image-resource/ptharjakarya.jpg" class="logo"><span></span> PT Harja <span>Karya</span></a>
+
+		<div class="navbar1">
+			<a href="#home">Home</a>
+			<a href="#layanan">Layanan</a>
+			<a href="#project">Project</a>
+			<a href="#contact">Kontak</a>
+		</div>
+
+		<div class="navbar2">
+			<a href="#" id="search"><i data-feather="search"></i></a>
+			<a href="#" id="profil"><i data-feather="user"></i></a>
+		</div>
+	</nav>
+
+
+	<!-- Main Section -->
+	<section class="main" id="home">
+		<main class="article">
+			<h1>Mari Dukung Kami Dalam Membangun Negri.</h1>
+			<p>Perusahaan penyedia jasa layanan kontraktor berskala kecil maupun besar. Berdiri sejak tahun 2018 hingga saat ini masih terus berkarya.</p>
+			<a href="#contact" class="action">Hubungi Kami</a>
+		</main>
+	</section>
+
+
+	<!-- Layanan Section -->
+	<section id="layanan" class="layanan">
+		<h2>Layanan</h2>
+
+		<div class="row">
+			<div class="article">
+				<h3>Penyedia Jasa Konstruksi</h3>
+			    <p>Kami melayani jasa berupa pembangunan gedung, jembatan, ataupun prasarana masyarakat lainnya. Kami juga melayani penyewaan alat berat dengan jangka waktu yang cukup lama dan tentunya biaya yang murah. Kami akan terus meningkatkan layanan kami supaya kedepannya dapat terus berkembang.</p>
+			</div>
+			<div class="aside">
+				<img src="image-resource/layanan-img.jpg">
+		    </div>
+		</div>
+	</section>
+
+
+	<!-- Project Section -->
+	<section id="project" class="project">
+		<h2>Project</h2>
+		<p>Hal-hal yang telah kami lakukan untuk memajukan pembangunan negri</p>
+
+		<div class="row">
+			<div class="project-list">
+				<img src="image-resource/project1.jpg">
+				<h3 class="project-name">Pembangunan jembatan antar kota</h3>
+			</div>
+			<div class="project-list">
+				<img src="image-resource/project2.jpg">
+				<h3 class="project-name">Pembangunan bangunan serbaguna</h3>
+			</div>
+		</div>
+	</section>
+
+
+	<!-- Contact Section -->
+	<section id="contact" class="contact">
+		<h2>Kontak</h2>
+		<p>Hubungi kami jika saudara tertarik atau membutuhkan jasa pelayanan kami</p>
+
+		<div class="row">
+			<form name="contactForm" method="post" action="send-process.php" onsubmit="return validateForm()" required>
+				<div class="input">
+					<i data-feather="user"></i>
+					<input type="text" name="nama" placeholder="Nama">
+				</div>
+				<div class="input">
+					<i data-feather="inbox"></i>
+					<input type="text" name="email" placeholder="Email">
+				</div>
+				<div class="input">
+					<i data-feather="home"></i>
+					<input type="text" name="address" placeholder="Alamat">
+				</div>
+				<div class="input">
+					<i data-feather="phone"></i>
+					<input type="text" name="telp" placeholder="No telp">
+				</div>
+				<div class="input">
+					<i data-feather="message-square"></i>
+					<input type="text" name="pesan" placeholder="Pesan">
+				</div>
+				<button type="submit" class="button">Kirim</button>
+			</form>
+			
+		</div>
+	</section>
+
+	<!-- Footer -->
+	<footer>
+		<div class="socialmedia">
+			<a href="#"><i data-feather="instagram"></i></a>
+			<a href="#"><i data-feather="twitter"></i></a>
+			<a href="#"><i data-feather="facebook"></i></a>
+		</div>
+		<div class="navigation">
+			<a href="#home">Home</a>
+			<a href="#layanan">Layanan</a>
+			<a href="#project">Project</a>
+			<a href="#contact">Kontak</a>
+		</div>
+		<div class="copyright">
+			<p>Created By Deni Sahendra .| &copy; 2023.</p>
+		</div>
+	</footer>
+
+
+	<!-- Icons -->
+	<script>
+      feather.replace()
+    </script>
+
+    <!-- Javascript Alert -->
+    <script type="text/javascript">
+    	function validateForm(){
+    		var nameContact = document.forms["contactForm"]["name"].value;
+    		var emailContact = document.forms["contactForm"]["email"].value;
+    		var alamatContact = document.forms["contactForm"]["address"].value;
+    		var telpContact = document.forms["contactForm"]["telp"].value;
+    		var pesanContact = document.forms["contactForm"]["pesan"].value;
+
+    		if(nameContact==""){
+    			alert ("Name must be filled");
+    			return false;
+    		}
+    		if(emailContact==""){
+    			alert ("Email must be filled");
+    			return false;
+    		}
+    		if(alamatContact==""){
+    			alert ("Alamat must be filled");
+    			return false;
+    		}
+    		if(telpContact==""){
+    			alert ("No telp must be filled");
+    			return false;
+    		}
+    		if(pesanContact==""){
+    			alert ("Pesan must be filled");
+    			return false;
+    		}
+    	}
+    </script>
+</body>
+</html>

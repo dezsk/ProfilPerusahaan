@@ -1,0 +1,240 @@
+:root {
+	--primary : #54B435;
+	--background : black;
+}
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	outline: none;
+	border: none;
+	text-decoration: none;
+}
+body {
+	font-family: 'Poppins', sans-serif;
+	background-color: var(--background);
+	color: white;
+}
+
+/* Navbar */
+.navbar {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1rem 7%;
+	background-color: black;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 9999;
+	border-bottom: 1px solid var(--primary);
+}
+.navbar .logo {
+	width: 70px;
+	height: 70px;
+}
+.navbar .navbar-name {
+	font-size: 4rem;
+	font-weight: 700;
+	font-style: italic;
+	color: #fff;
+}
+.navbar .navbar-name span {
+	color: var(--primary);
+}
+.navbar .navbar1 a {
+	display: inline-block;
+	font-size: 2rem;
+	margin: 0 1rem;
+	color: #fff;
+}
+.navbar .navbar1 a:hover {
+	color: var(--primary);
+}
+.navbar .navbar2 a {
+	margin: 0 1rem;
+	color: #fff;
+}
+
+/* Media Query */
+/* Laptop */
+@media (max-width: 11366px){
+	html {
+		font-size: 75%;
+	}
+}
+
+/* Main Section */
+.main {
+	min-height: 100vh;
+	display: flex;
+	align-items: center;
+	background-image: url('image-resource/mainbg.jpg');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	position: relative;
+}
+.main::after {
+	content: '';
+	display: block;
+	position: absolute;
+	background: linear-gradient(0deg, rgba(1, 1, 3, 1) 3%, rgba(255, 255, 255, 0) 50%);
+	width: 100%;
+	height: 20%;
+	bottom: 0;
+}
+.main .article {
+	max-width: 80rem;
+	padding: 1.4rem 7%;
+}
+.main .article h1 {
+	font-size: 7em;
+	line-height: 1.4;
+	color: #fff;
+}
+.main .article p {
+	font-size: 3rem;
+	margin-top: 1rem;
+	line-height: 1;
+	font-weight: 300;
+}
+.main .article .action {
+	margin-top: 1rem;
+	padding: 1rem 3rem;
+	font-size: 2rem;
+	display: inline-block;
+	background-color: var(--primary);
+	border-radius: 1rem;
+	color: #fff;
+	box-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+}
+
+/* Layanan, Project, and Contact section */
+.layanan, .project, .contact {
+	padding: 10rem 25% 15rem;
+	justify-content: center;
+}
+.layanan h2, .project h2, .contact h2{
+	text-align: center;
+	margin-bottom: 3rem;
+	font-size: 3rem;
+}
+.layanan .row {
+	display: flex;
+}
+.layanan .row .article {
+	flex: 1 1 20rem;
+	padding: 0 1rem;
+}
+.layanan .row .article h3 {
+	font-size: 2rem;
+	margin-bottom: 2rem;
+}
+.layanan .row .article p {
+	font-size: 2rem;
+	margin-bottom: 1rem;
+	line-height: 2rem;
+	font-weight: 200;
+}
+.layanan .row aside {
+	flex: 1 1 20rem;
+}
+.layanan .row aside img {
+	width: 100%;
+}
+
+/* Project Section */
+.project h2, .contact h2 {
+	margin-bottom: 1rem;
+}
+.project p, .contact p {
+	font-size: 1rem;
+	text-align: center;
+	max-width: 30rem;
+	font-weight: 300;
+	line-height: 2;
+	margin: auto;
+}
+.project .row {
+	display: flex;
+	margin-top: 5rem;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+.project .row .project-list {
+	text-align: center;
+	padding-bottom: 4rem;
+}
+.project .row .project-list img {
+	border-radius: 50%;
+	width: 70%;
+}
+.project .row .project-list .project-name {
+	margin: 1rem auto 0.5rem;
+}
+
+/* Contact Section */
+
+.contact .row {
+	display: flex;
+	margin-top: 2rem;
+	background-color: #222;
+}
+.contact .row .map {
+	flex: 1 1 45rem;
+	width: 100%;
+	object-fit: cover;
+}
+.contact .row form {
+	flex: 1 1 45rem;
+	padding: 5rem 2rem;
+	text-align: center;
+}
+
+.contact .row form .input{
+	display: flex;
+	margin-top: 2rem;
+	align-items: center;
+	border: 1px solid #eee;
+	padding-left: 2rem;
+	background-color: var(--background);
+}
+.contact .row form .input input {
+	width: 100%;
+	padding: 2rem;
+	font-size: 2rem;
+	background: none;
+	color: #fff;
+}
+
+.contact .row form .button{
+	cursor: pointer;
+	padding: 1rem 3rem;
+	margin-top: 3rem;
+	font-size: 2rem;
+	display: inline-block;
+	background-color: var(--primary);
+	color: #fff;
+}
+
+/* Footer */
+footer {
+	background-color: var(--primary);
+	margin-top: 3rem;
+	padding: 1.5rem 2.5rem;
+	text-align: center;
+	font-size: 1.5rem;
+}
+
+footer .socialmedia a {
+	padding: 1rem 0;
+	margin: 1rem;
+	color: white;
+	size: 1.5rem;
+}
+footer .navigation a {
+	padding: 1rem 1rem;
+	color: white;
+}
